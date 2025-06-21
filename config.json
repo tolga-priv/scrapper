@@ -1,0 +1,58 @@
+{
+  "performance": {
+    "maxConcurrent": 3,
+    "requestDelay": 1500,
+    "batchSize": 5,
+    "timeout": 30000
+  },
+  "retry": {
+    "maxRetries": 3,
+    "backoffMultiplier": 2,
+    "maxDelay": 10000
+  },
+  "download": {
+    "baseDir": "./downloads",
+    "tempDir": "./temp",
+    "imageFormat": "jpg",
+    "imageQuality": 90,
+    "createSubfolders": true
+  },
+  "sites": [
+    {
+      "name": "Hayalistic",
+      "domain": "https://hayalistic.com.tr",
+      "theme": "madara",
+      "enabled": true,
+      "settings": {
+        "requestDelay": 1000,
+        "maxRetries": 3,
+        "timeout": 20000,
+        "concurrent": 2
+      }
+    },
+    {
+      "name": "Gölge Bahçesi",
+      "domain": "https://golgebahcesi.com",
+      "theme": "themesia",
+      "enabled": true,
+      "settings": {
+        "requestDelay": 1500,
+        "maxRetries": 3,
+        "timeout": 25000,
+        "concurrent": 2
+      }
+    },
+    {
+      "name": "Uzay Manga",
+      "domain": "https://uzaymanga.com",
+      "theme": "uzay",
+      "enabled": true,
+      "settings": {
+        "requestDelay": 1200,
+        "maxRetries": 3,
+        "timeout": 20000,
+        "concurrent": 3
+      }
+    }
+  ]
+}

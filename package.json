@@ -1,0 +1,84 @@
+{
+  "name": "manga-scraper-v2",
+  "version": "2.0.0",
+  "description": "Optimized manga scraping and downloading system",
+  "main": "dist/cli/index.js",
+  "bin": {
+    "manga-scraper": "./dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node -r tsconfig-paths/register src/cli/index.ts",
+    "start": "node dist/cli/index.js",
+    "test": "npm run dev test",
+    "test:debug": "npm run dev test -- --debugMode",
+    "test:verbose": "npm run dev test -- --verbose",
+    "test:quick": "npm run dev test -- --quick",
+    "list": "npm run dev list",
+    "list:debug": "npm run dev list -- --debugMode",
+    "download": "npm run dev download",
+    "download:debug": "npm run dev download -- --debugMode",
+    "clean": "node scripts/clean.js",
+    "clean:dist": "rimraf dist",
+    "clean:logs": "rimraf logs",
+    "clean:temp": "rimraf downloads/temp",
+    "clean:all": "npm run clean",
+    "setup": "npm install && npm run build",
+    "lint": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer": "^21.0.0",
+    "jsdom": "^22.1.0",
+    "ansi-styles": "^6.2.1",
+    "commander": "^11.0.0",
+    "ora": "^7.0.1",
+    "inquirer": "^9.2.0",
+    "progress": "^2.0.3",
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.1.1",
+    "p-queue": "^7.4.1",
+    "p-retry": "^6.2.0",
+    "axios": "^1.5.0",
+    "sharp": "^0.32.0",
+    "sanitize-filename": "^1.6.3",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "@types/jsdom": "^21.1.1",
+    "@types/inquirer": "^9.0.0",
+    "@types/progress": "^2.0.5",
+    "@types/fs-extra": "^11.0.1",
+    "typescript": "^5.1.6",
+    "ts-node": "^10.9.1",
+    "eslint": "^8.47.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "prettier": "^3.0.2",
+    "rimraf": "^5.0.1"
+  },
+  "keywords": [
+    "manga",
+    "scraper",
+    "downloader",
+    "madara",
+    "themesia", 
+    "uzay",
+    "anime",
+    "comics"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/manga-scraper-v2.git"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
